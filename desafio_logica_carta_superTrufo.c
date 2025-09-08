@@ -2,6 +2,7 @@
 
 //desafio-logica
 //nivel aventureiro
+//nivel mestre
 int main() {
  
     //Declaração de Variaveis
@@ -37,7 +38,7 @@ int main() {
     int resultPIBperCapital;
     int resultSuperPoder;
 
-    int escolha;
+    int escolha, escolha1, somaPonto, ponto, result;
 
     // Cadastro da Carta 1
     printf("Carta 1:\n ");
@@ -126,19 +127,20 @@ int main() {
     printf("Escolha um dos Atributos para Comparar: ");
     scanf("%d", &escolha);
 
-
     switch (escolha){
         case 1:
-            if(populacao > populacao1){
+              if(populacao > populacao1){
                 printf("Pais da Carta 1: %c\n", estado);
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: População\n");
                 printf("Carta 1 Venceu com: %d\n", populacao);
-            }else{
+                ponto = 1;
+              }else{
                 printf("Pais da Carta 1: %c\n", estado);
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: População\n");
                 printf("Carta 2 Venceu com: %d\n", populacao1);
+                ponto = 0;
                 
             }
             break;   
@@ -148,11 +150,13 @@ int main() {
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: area\n");
                 printf("Carta 1 Venceu com: %.2f\n", area);
+                ponto = 1;
             }else{
                 printf("Pais da Carta 1: %c\n", estado);
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: area\n");
                 printf("Carta 2 Venceu com: %.2f\n", area1);
+                ponto = 0;
             }
             break;
         case 3:
@@ -161,11 +165,13 @@ int main() {
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: pib\n");
                 printf("Carta 1 Venceu com: %.2f\n", pib);
+                ponto = 1;
             }else{
                 printf("Pais da Carta 1: %c\n", estado);
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: pib\n");
                 printf("Carta 2 Venceu com: %.2f\n", pib1);
+                ponto = 0;
             }
             break;
         case 4:
@@ -174,11 +180,13 @@ int main() {
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: pontos turisticos\n");
                 printf("Carta 1 Venceu com: %d\n", pontos_turisticos);
+                ponto = 1;
             }else{
                 printf("Pais da Carta 1: %c\n", estado);
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: pontos turisticos\n");
                 printf("Carta 2 Venceu com: %c\n", pontos_turisticos1);
+                ponto = 0;
             }
             break;
         case 5:
@@ -187,11 +195,13 @@ int main() {
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo:densidade populacional\n");
                 printf("Carta 1 Venceu com: %.2f\n",densidade_populacional);
+                ponto = 1;
             }else{
                 printf("Pais da Carta 1: %c\n", estado);
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo:densidade populacional\n");
                 printf("Carta 2 Venceu com: %.2f\n",densidade_populacional);
+                ponto = 0;
             }
             break;
         case 6:
@@ -200,11 +210,13 @@ int main() {
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: PIB per capita\n");
                 printf("Carta 1 Venceu com: %d\n", PIB_per_capita);
+                ponto = 1;
             }else{
                 printf("Pais da Carta 1: %c\n", estado);
                 printf("Pais da Carta 2: %c\n", estado1);
                 printf("Atributo: PIB per capita\n");
                 printf("Carta 2 Venceu com: %d\n", PIB_per_capita);
+                ponto = 0;
             }
             break;
             default:
@@ -212,6 +224,126 @@ int main() {
                 printf("Empate Em seus Atributos");
             
             break;
+    }
+    somaPonto=ponto;
+    printf("\n----------________--------\n");
+    printf("Comparação de Cartas\n");
+    printf("Opção 1 - População\n");
+    printf("Opção 2 - Area\n");
+    printf("Opção 3 - PIB\n");
+    printf("Opção 4 - Pontos Turisticos\n");
+    printf("Opção 5 - Densidade Populacional\n");
+    printf("Opção 6 - PIB per Capital\n");
+    printf("Escolha um dos Atributos para Comparar: ");
+    scanf("%d", &escolha1);
+    (escolha == escolha1) ? printf("Escolheu Atributo Iqual "):printf("Ok");
+
+    switch (escolha1){
+        case 1:
+              if(populacao > populacao1){
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: População\n");
+                printf("Carta 1 Venceu com: %d\n", populacao);
+                ponto = 1;
+              }else{
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: População\n");
+                printf("Carta 2 Venceu com: %d\n", populacao1);
+                ponto = 0;
+                
+            }
+            break;   
+        case 2:
+            if(area > area1){
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: area\n");
+                printf("Carta 1 Venceu com: %.2f\n", area);
+                ponto = 1;
+            }else{
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: area\n");
+                printf("Carta 2 Venceu com: %.2f\n", area1);
+                ponto = 0;
+            }
+            break;
+        case 3:
+            if(pib > pib1){
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: pib\n");
+                printf("Carta 1 Venceu com: %.2f\n", pib);
+                ponto = 1;
+            }else{
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: pib\n");
+                printf("Carta 2 Venceu com: %.2f\n", pib1);
+                ponto = 0;
+            }
+            break;
+        case 4:
+            if(pontos_turisticos > pontos_turisticos1){
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: pontos turisticos\n");
+                printf("Carta 1 Venceu com: %d\n", pontos_turisticos);
+                ponto = 1;
+            }else{
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: pontos turisticos\n");
+                printf("Carta 2 Venceu com: %c\n", pontos_turisticos1);
+                ponto = 0;
+            }
+            break;
+        case 5:
+            if(densidade_populacional >densidade_populacional){
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo:densidade populacional\n");
+                printf("Carta 1 Venceu com: %.2f\n",densidade_populacional);
+                ponto = 1;
+            }else{
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo:densidade populacional\n");
+                printf("Carta 2 Venceu com: %.2f\n",densidade_populacional);
+                ponto = 0;
+            }
+            break;
+        case 6:
+            if(PIB_per_capita > PIB_per_capita){
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: PIB per capita\n");
+                printf("Carta 1 Venceu com: %d\n", PIB_per_capita);
+                ponto = 1;
+            }else{
+                printf("Pais da Carta 1: %c\n", estado);
+                printf("Pais da Carta 2: %c\n", estado1);
+                printf("Atributo: PIB per capita\n");
+                printf("Carta 2 Venceu com: %d\n", PIB_per_capita);
+                ponto = 0;
+            }
+            break;
+            default:
+            
+                printf("Empate Em seus Atributos");
+            
+            break;
+    }
+
+    somaPonto += ponto;
+    if(somaPonto > 1){
+        printf("Voce Venceu!!!\n");
+    }else if(somaPonto < 1){
+        printf("Você Perdeu\n");
+    }else {
+        printf("Voce Empatou\n");
     }
 
 
